@@ -1,4 +1,4 @@
-const functions = require("firebase-functions")
+
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -51,5 +51,3 @@ mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true }, () => {
   console.log("connected");
 });
 
-
-exports.app = functions.https.onRequest(app)
