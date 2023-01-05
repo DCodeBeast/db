@@ -24,7 +24,6 @@ router.post("/", async (req, res) => {
     const task = new Task({
       twitter: req.body.twitter,
       retweet: req.body.retweet,
-      discord: req.body.discord,
       wallet: req.body.account,
       
     
@@ -40,7 +39,7 @@ router.post("/", async (req, res) => {
     }
 
 
-    if (!twitter || !retweet || !discord || !account) {
+    if (!twitter || !retweet || !account) {
       return res.status(200).json({
         error: true,
         message: "Enter All Fields",

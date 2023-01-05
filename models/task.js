@@ -5,9 +5,8 @@ const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema(
   {
-    twitter: { type: String },
+    twitter: { type: String , required: true, unique: true},
     retweet: { type: String, required: true, unique: true },
-    discord: { type: String, required: true },
     wallet: { type: String, required: true },
     wl: { type: Boolean, default:false},
 
